@@ -29,7 +29,6 @@ def do_comments(id):
         #while True:
         r = requests.get(_url)
         data = json.loads(r.text)
-        print(data.keys())
         for comment in data['data']:
             try:
                 pass
@@ -38,7 +37,6 @@ def do_comments(id):
             except KeyError:
                 pass
         _url = __url.replace('$F',data['paging']['cursors']['after'])
-        print(_url)
         r = requests.get(_url)
     except KeyError:
         return s
@@ -67,7 +65,6 @@ while pages:
         pages -= 1
         print("Next page.", pages,"more pages to go.")
     except KeyError:
-        print(data)
         break
 
 wc.generate_from_frequencies(ctr.items()).to_file('out.png')

@@ -69,6 +69,5 @@ while pages:
     except KeyError:
         print(data)
         break
-    break
 
 wc.generate_from_frequencies(ctr.items()).to_file('out.png')

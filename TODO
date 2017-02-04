@@ -1,2 +1,7 @@
 * read options from a file
 * I got a lot of janitorial work to do...
+** Better variable names
+** Comments
+** read keys and such from settings.cfg
+*** settings.cfg parser
+** Use .format() instead of the hacky $VAR + .replace() technique
